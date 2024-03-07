@@ -24,3 +24,7 @@ docker run \
 | VNC_RESOLUTION |               VNC Resolution (Default: 1280x720)               |
 |    APP_NAME    |                Name of the app (Heroku specific)               |
 |    NO_SLEEP    | Prevent app from sleeping (Heroku specific, default: disabled) |
+
+5900 vnc
+8080 webvnc
+9000 chrome_debug

@@ -13,7 +13,7 @@ ENV	VNC_PASS="samplepass" \
 #VNC Resolution(720p is preferable)
 	VNC_RESOLUTION="1280x720" \
 #VNC Shared Mode (0=off, 1=on)
-	VNC_SHARED=0 \
+	VNC_SHARED=1 \
 #Local Display Server Port
 	DISPLAY=:0 \
 #NoVNC Port
@@ -30,7 +30,7 @@ COPY rootfs/ /
 SHELL ["/bin/bash", "-c"]
 
 RUN	apt-get update && \
-	apt-get install -y tzdata ca-certificates supervisor curl wget python3 python3-pip sed unzip xvfb x11vnc websockify openbox libnss3 libgbm-dev libasound2 fonts-droid-fallback && \
+	apt-get install -y tzdata ca-certificates supervisor socat curl wget python3 python3-pip sed unzip xvfb x11vnc websockify openbox libnss3 libgbm-dev libasound2 fonts-droid-fallback && \
 #Chromium
 	wget https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Linux_x64%2F1235467%2Fchrome-linux.zip?alt=media -O /tmp/chrome-linux.zip && \
 	unzip /tmp/chrome-linux.zip -d /opt && \
