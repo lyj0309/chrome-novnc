@@ -7,7 +7,7 @@ LABEL Maintainer "Apoorv Vyavahare <apoorvvyavahare@pm.me>"
 ARG DEBIAN_FRONTEND=noninteractive
 
 #VNC Server Password
-ENV	VNC_PASS="samplepass" \
+ENV	VNC_PASS="654321" \
 #VNC Server Title(w/o spaces)
 	VNC_TITLE="Chromium" \
 #VNC Resolution(720p is preferable)
