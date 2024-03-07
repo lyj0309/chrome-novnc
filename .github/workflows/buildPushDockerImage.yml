@@ -22,4 +22,4 @@ jobs:
         push: true
         tags:
           ${{ github.repository }}:latest
-
+ 
