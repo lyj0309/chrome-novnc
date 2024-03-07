@@ -30,7 +30,7 @@ COPY rootfs/ /
 SHELL ["/bin/bash", "-c"]
 
 RUN	apt-get update && \
-	apt-get install -y tzdata ca-certificates supervisor socat curl wget python3 python3-pip sed unzip xvfb x11vnc websockify openbox libnss3 libgbm-dev libasound2 fonts-droid-fallback && \
+	apt-get install -y tzdata ca-certificates supervisor socat curl wget sed unzip xvfb x11vnc websockify openbox libnss3 libgbm-dev libasound2 fonts-droid-fallback && \
 #Chromium
 	wget https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Linux_x64%2F1235467%2Fchrome-linux.zip?alt=media -O /tmp/chrome-linux.zip && \
 	unzip /tmp/chrome-linux.zip -d /opt && \
@@ -41,7 +41,7 @@ RUN	apt-get update && \
 	echo $TZ > /etc/timezone && \
 #Wipe Temp Files
 	rm -rf /var/lib/apt/lists/* && \ 
-	apt-get remove -y wget python3-pip unzip && \
+	apt-get remove -y wget unzip && \
 	apt-get -y autoremove && \
 	apt-get clean && \
 	rm -rf /tmp/*
