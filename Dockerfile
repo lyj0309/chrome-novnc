@@ -14,8 +14,6 @@ ENV	VNC_PASS="654321" \
 	VNC_RESOLUTION="1280x720" \
 #VNC Shared Mode (0=off, 1=on)
 	VNC_SHARED=1 \
-#Local Display Server Port
-	DISPLAY=:0 \
 #NoVNC Port
 	NOVNC_PORT=$PORT \
 	PORT=8080 \
